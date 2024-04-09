@@ -10,14 +10,7 @@ function sortear() {
     return;
   }
 
-  if (de >= ate) {
-    alert(
-      `Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!`
-    );
-    return;
-  }
-
-  if (de >= ate) {
+  if (de > ate) {
     alert(
       `Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!`
     );
@@ -30,7 +23,9 @@ function sortear() {
       numero = obterNumeroAleatorio(de, ate);
     }
 
-    if (quantidade >= ate - de + 1) {
+    if (ate - de <= 1) {
+      // Não faz nada se de e ate forem iguais a 1
+    } else if (quantidade >= ate - de + 1) {
       alert(
         'Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!'
       );

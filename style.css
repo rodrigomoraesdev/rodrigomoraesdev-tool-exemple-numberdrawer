@@ -14,7 +14,7 @@ body {
 }
 
 body::before {
-    background-image: url("img/code.png");
+    background-image: url("/assets/img/code.png");
     background-repeat: no-repeat;
     background-position: right;
     content: "";
@@ -34,7 +34,7 @@ body::before {
     border-radius: 24px;
     border: 1px solid #1875E8;
     box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-    background-image: url("img/Ruido.png");
+    background-image: url("/assets/img/Ruido.png");
     background-size: 100% 100%;
     position: relative;
     overflow: hidden;
@@ -50,6 +50,7 @@ body::before {
 .container__informacoes {
     flex: 1;
     padding: 3rem;
+    width: 40px;
 }
 
 .container__texto {
@@ -129,6 +130,41 @@ button:disabled {
     background-color: gray;
 }
 
+.texto__paragrafo {
+    font-size: 1rem;
+    display: block;
+    word-wrap: break-word
+}
+
+.dev {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.dev__dev {
+    display: inline-block;
+    /* Transforma o elemento em bloco e alinha ao centro */
+    margin: 2rem auto 0;
+    /* Adiciona margem de 2rem no topo, centraliza horizontalmente */
+    border-radius: 0.5rem;
+    background: #1876e867;
+    padding: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    /* Remove sublinhado padrão do link */
+    color: white;
+    /* Define a cor do texto como branca */
+}
+
+.dev__dev a {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1248px) {
     .container__imagem-pessoa {
         display: none;
@@ -143,12 +179,6 @@ button:disabled {
         flex: 1;
         padding: 0.5rem;
         width: 40px;
-    }
-
-    .texto__paragrafo {
-        font-size: 1rem;
-        display: block;
-        word-wrap: break-word
     }
 
     .container__botoes {
